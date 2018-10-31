@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>四十五度創意有限公司</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+        crossorigin="anonymous">
+    <style>
+        /* Make the image fully responsive */
+            body, input, select, textarea {
+                font-family: PingFangTC-Regular, sans-serif;
+	        }   
+
+            .carousel-inner img {
+                width: 100%;
+                height: 100%;
+            }
+            .color1 {
+                background-color: #C8DDA7;
+                padding: 0;
+                margin: 0;
+            }
+            .c-bg-1 {
+                height: 700px;
+                background-image: url(image/QABKG01.png);
+                
+            }
+            .c-bg-2 {
+                height: 660px;
+                background-image: url(image/BKG01.png);
+            }
+            .card {
+                 overflow: hidden;
+            }
+
+             .card-img-left {
+                position: absolute;
+                height: auto;
+                max-height: 100%;
+                width: auto;
+                max-width: 40%;
+            }
+
+            .card-img-left ~ .card-body {
+                 margin-left: 40%;
+            }
+
+            /* .navbar-custom {
+                background-color: #ff5500;
+            }            */
+            /* change the brand and text color */
+            .navbar-custom .navbar-brand,
+            .navbar-custom .navbar-text {
+                color:black;
+                /* padding: 0.8rem 1rem; */
+            }
+            /* change the link color and add padding for height */
+            .navbar-custom .navbar-nav .nav-link {
+                color: black;
+                /* padding: 1rem 1rem; */
+            }
+            /* change the color of active or hovered links */
+            .navbar-custom .nav-item.active .nav-link,
+            .navbar-custom .nav-item:hover .nav-link {
+                color: #ffffff;
+                border-radius: 10px;
+                background-color:#D86D02; /* add background-color to active links */
+            }
+    </style>
+    <script>
+        $(function () {
+                $("nav").find("a").click(function () {
+                    let _target = $(this).data("target");
+                    let h = $(_target).offset().top;
+                    h -= 111;
+                    console.log('h: ' + h);
+                    $("html, body").animate({
+                        scrollTop: h
+                    });
+                });
+                $("#goTop").click(function () {
+                    $("html, body").animate({
+                        scrollTop: 0
+                    });
+                      return false;
+                });
+    
+                $("#goTop").hide();
+                $(window).scroll(function () {
+                    let h = $(window).scrollTop();
+                    if (h > 600) {
+                        $("#goTop").show().removeClass("animated fadeOutRightBig ").addClass("animated fadeInRightBig");
+                        // $("#goTop").removeClass("out").addClass("in");
+                    } else {
+                        $("#goTop").removeClass("animated fadeInRightBig").addClass("animated fadeOutRightBig");
+                        // $("#goTop").removeClass("in").addClass("out");
+                    } 
+                });
+            });
+        </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- logo -->
+        <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top navbar-custom">
+            <a class="navbar-brand" href="index.html"><img src="image/logo-f-s.png" alt="" style="width:60px ; height:15;"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-5 dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            產品項目
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="essential_oil.html">精油系列</a>
+                            <a class="dropdown-item" href="fragrance.html">擴香系列</a>
+                            <a class="dropdown-item" href="incense.html">線香系列</a>
+                            <a class="dropdown-item" href="toilet.html">其他系列</a>
+                        </div>
+                    <li class="nav-item mx-5">
+                        <a class="nav-link" href="#" data-target="#info">香氛知識+</a>
+                    </li>
+                    </li>
+                    <li class="nav-item mx-5">
+                        <a class="nav-link" href="#" data-target="#about">關於45度</a>
+                    </li>
+                    <li class="nav-item mx-5">
+                        <a class="nav-link" href="#" data-target="#service">服務項目</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <br><br><br><br><br>
+        <!-- banner -->
+        <div id="banner" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#banner" data-slide-to="0" class="active"></li>
+                <li data-target="#banner" data-slide-to="1"></li>
+                <li data-target="#banner" data-slide-to="2"></li>
+                <li data-target="#banner" data-slide-to="3"></li>
+                <li data-target="#banner" data-slide-to="4"></li>
+                <li data-target="#banner" data-slide-to="5"></li>
+                <li data-target="#banner" data-slide-to="6"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="image/banner01.png" alt="#" width="1100" height="500">
+                </div>
+                <div class="carousel-item">
+                    <img src="image/banner02.png" alt="#" width="1100" height="500">
+                </div>
+                <div class="carousel-item">
+                    <img src="image/banner03.png" alt="#" width="1100" height="500">
+                </div>
+                <div class="carousel-item">
+                    <img src="image/banner04.png" alt="#" width="1100" height="500">
+                </div>
+                <div class="carousel-item">
+                    <img src="image/banner05.png" alt="#" width="1100" height="500">
+                </div>
+                <div class="carousel-item">
+                    <img src="image/banner06.png" alt="#" width="1100" height="500">
+                </div>
+                <div class="carousel-item">
+                    <img src="image/banner07.png" alt="#" width="1100" height="500">
+                </div>
+            </div>
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#banner" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#banner" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+
+        <!-- item -->
+        <h5 class="my-1">產品項目</h5>
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="essential_oil.html"><img class="card-img-top" src="image/section01.png" alt="Card image" style="width:95%"></a>
+                <div class="card-body">
+                    <p class="text-center">精油系列</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <a href="fragrance.html"><img class="card-img-top" src="image/section02.png" alt="Card image" style="width:95%"></a>
+                <div class="card-body">
+                    <p class="text-center">擴香系列</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <a href="incense.html"><img class="card-img-top" src="image/section03.png" alt="Card image" style="width:95%"></a>
+                <div class="card-body">
+                    <p class="text-center">線香系列</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <a href="toilet.html"><img class="card-img-top" src="image/section04.png" alt="Card image" style="width:95%"></a>
+                <div class="card-body">
+                    <p class="text-center">其他系列</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q&A -->
+        <div id="info" class="c-bg-1">
+            <h5 class="p-3" style="color:white">香氛知識+</h5>
+            <div class="row mx-1">
+                <div class="col-md-6">
+                    <div class="card flex-md-row mb-5 shadow-sm h-md-250">
+                        <img src="image/QA0101.jpg" style="width: 200px; height: 170px;">
+                        <div class="card-body d-flex flex-column align-items-start">
+                            <h5>香味的力量藏在細節</h5>
+                            <p class="card-text">關於香氛精油的小知識</p>
+                            <button class="align-self-end btn-success" onclick="javascript:location.href='https://fashion.ettoday.net/news/718503'">Read Me</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card flex-md-row mb-5 shadow-sm h-md-250">
+                        <img src="image/QA0102.jpg" style="width: 200px; height: 170px;">
+                        <div class="card-body d-flex flex-column align-items-start">
+                            <h5>香氛控的知識進補</h5>
+                            <p style="font-size: 8px" class="card-text">每天都穿戴香水的妳，必須謹記的四個使用習慣</p>
+                            <button class="align-self-end btn-success my-1" onclick="javascript:location.href='http://thefemin.com/2017/12/4-tips-to-wear-perfume-right/'">Read Me</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-1">
+                <div class="col-md-6">
+                    <div class="card flex-md-row mb-5 shadow-sm h-md-250">
+                        <img src="image/QA0201.jpg" style="width: 200px; height: 170px;">
+                        <div class="card-body d-flex flex-column align-items-start">
+                            <h5>香氛蠟燭也有使用說明？</h5>
+                            <p style="font-size: 8px" class="card-text">10件關於香氛蠟燭你想知道，
+                                卻不知要問誰的事</p>
+                            <button class="align-self-end btn-success my-1" onclick="javascript:location.href='https://www.shoppingdesign.com.tw/post/view/2790'">Read Me</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card flex-md-row mb-5 shadow-sm h-md-250">
+                        <img src="image/QA0202.jpg" style="width: 200px; height: 170px;">
+                        <div class="card-body d-flex flex-column align-items-start">
+                            <h5>你一定需要的15支精油！</h5>
+                            <p style="font-size: 8px" class="card-text">面對琳瑯滿目的精油時，
+                                該從哪支開始嘗試呢？</p>
+                            <button class="align-self-end btn-success my-1" onclick="javascript:location.href='https://www.tw-aa.org/articledetail-580.html'">Read Me</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-1">
+                <div class="col-md-6">
+                    <div class="card flex-md-row mb-5 shadow-sm h-md-250">
+                        <img src="image/QA0301.jpg" style="width: 200px; height: 170px;">
+                        <div class="card-body d-flex flex-column align-items-start">
+                            <h5>為什麼要點蠟燭?</h5>
+                            <p style="font-size: 8px" class="card-text">很多人問直接點精油就好了
+                                為什麼要燒精油蠟燭?
+                                是啊，為什麼呢?</p>
+                            <button class="align-self-end btn-success" onclick="javascript:location.href='https://elephantemily2015.wordpress.com/2015/03/23/%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A6%81%E9%BB%9E%E7%B2%BE%E6%B2%B9%E5%A4%A7%E8%B1%86%E8%A0%9F%E7%87%AD/#more-36'">Read Me</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card flex-md-row mb-5 shadow-sm h-md-250">
+                        <img src="image/QA0302.jpg" style="width: 200px; height: 170px;">
+                        <div class="card-body d-flex flex-column align-items-start">
+                            <h5>療癒不成反中毒？</h5>
+                            <p style="font-size: 8px" class="card-text">精油種類繁多，時有誤食、
+                                擦抹引起過敏的案例，
+                                該如何使用，才不會傷身呢？</p>
+                            <button class="align-self-end btn-success my-1" onclick="javascript:location.href='https://blog.hamibook.com.tw/%E5%AE%B6%E5%BA%AD%E7%94%9F%E6%B4%BB/%E7%B2%BE%E6%B2%B9%E4%BA%82%E7%94%A8%E6%9C%83%E6%9C%89%E4%BA%8B%EF%BC%8C%E7%99%82%E7%99%92%E4%B8%8D%E6%88%90%E5%8F%8D%E4%B8%AD%E6%AF%92%EF%BC%9F/'">Read Me</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <h5 class="my-0">關於45度</h5> -->
+
+        <div id="about" class="row align-items-center color1">
+            <div class="col-sm-3 px-0">
+                <p class="text-center">45度<br>是向上成長角度</p>
+            </div>
+            <div class="col-sm-3 px-0">
+                <img src="image/about0101.jpg" alt="" style="width: 277px ">
+            </div>
+            <div class="col-sm-3 px-0">
+                <p class="text-center">我們推行慢下來<br>聆聽來自內心的聲音</p>
+            </div>
+            <div class="col-sm-3 px-0">
+                <img src="image/about0102.jpg" alt="" style="width: 277px ">
+            </div>
+        </div>
+        <div class="row align-items-center color1">
+            <div class="col-sm-3 px-0">
+                <img src="image/about0201.jpg" alt="" style="width: 277px ">
+            </div>
+            <div class="col-sm-3 px-0">
+                <p class="text-center">體驗生活<br>改善生活<br>享受生活</p>
+            </div>
+            <div class="col-sm-3 px-0">
+                <img src="image/about0202.jpg" alt="" style="width: 277px ">
+            </div>
+            <div class="col-sm-3 px-0">
+                <p class="text-center">放鬆您緊繃的神經</p>
+            </div>
+        </div>
+        <div class="row align-items-center color1">
+            <div class="col-sm-3 px-0">
+                <p class="text-center">致力環境保護<br>支持天然有機</p>
+            </div>
+            <div class="col-sm-3 px-0">
+                <img src="image/about0301.jpg" alt="" style="width: 277px ">
+            </div>
+            <div class="col-sm-3 px-0">
+                <p class="text-center">陪伴您迎接每一次的挑戰</p>
+            </div>
+            <div class="col-sm-3 px-0">
+                <img src="image/about0302.jpg" alt="" style="width: 277px ">
+            </div>
+        </div>
+
+        <!-- form -->
+        <div id="service" class="container c-bg-2">
+            <div class="row">
+                <div class="col-sm-5">
+                    <h4 class="text-white p-4">讓四十五度為您服務</h4><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <h4 class="text-white px-4">四十五度創意有限公司</h4>
+                    <p class="text-white px-4">( 0 3 ) 3 3 6 - 5 1 1 8</p>
+                    <p class="text-white px-4 ">0 9 3 1 - 1 5 5 - 1 5 8 </p>
+                    <p class="text-white px-4">supererica168@gmail.com</p>
+                    <p class="text-white px-4">桃園市復興路186號4樓</p>
+                    <ul>
+                        <li style="display:inline;"><a href="https://www.facebook.com/45degreedesign/"><i style="color:white" class="fab fa-facebook fa-2x"></i></a></li>
+                        <li style="display:inline;"><a href="#"><i style="color:white" class="fab fa-line fa-2x"></i></a></li>
+                    </ul>
+
+
+                </div>
+                <div class="col-sm-7 align-self-center">
+                    <form action="/action_page.php">
+                        <div class="form-group text-white ">
+                            <label for="usr"></label>
+                            <input type="text" class="form-control" id="usr" placeholder="姓名" style="background-color: rgba(0, 0, 0, 0.1) ; border: 1px solid white;">
+                        </div>
+                        <div class="form-group text-white ">
+                            <label for="pwd"></label>
+                            <input type="text" class="form-control" placeholder="電子郵件" style="background-color: rgba(0, 0, 0, 0.1) ; border: 1px solid white;">
+                        </div>
+                        <div class="form-group text-white ">
+                            <label for="pwd"></label>
+                            <input type="text" class="form-control" placeholder="電話" style="background-color: rgba(0, 0, 0, 0.1) ; border: 1px solid white;">
+                        </div>
+                        <div class="form-group text-white ">
+                            <label for="comment"></label>
+                            <textarea class="form-control" rows="12" id="comment" name="text" placeholder="請留下您的訊息："
+                                style="background-color: rgba(0, 0, 0, 0.1) ; border: 1px solid white;"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal">送出</button>
+
+                        <!-- The Modal -->
+                        <div class="modal fade" id="myModal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">親愛的客戶:</h4>
+                                        <button type="button" class="close" data-dismiss="modal">×</button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        您的訊息已經寄出, 我們收到後會盡快與您聯絡,謝謝.
+                                    </div>
+
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn" data-dismiss="modal">關閉</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="d-flex justify-content-sm-around mt-5 text-secondary">
+            <div class="p-2">
+                <h5>有關45度</h5>45度想做的事
+            </div>
+            <div class="p-2">
+                <h5>香氛知識+</h5>認識香氛<br>香氛最流行
+            </div>
+            <div class="p-2">
+                <h5>產品項目</h5>精油<br>擴香儀<br>線香<br>浴廁芬芳
+            </div>
+            <div class="p-2">
+                <h5>服務項目</h5>與我們連絡<br>代客購買
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-sm-around mt-3">
+            <div class="align-self-sm-end">支持創意發想 <img src="image/logo-f-s.png" alt="" style="width:120px ; height:30;">發掘生活樂趣</div>
+        </div>
+        <div class="d-flex justify-content-sm-around">
+            <div>Copyright 2018 ©45度創意有限公司</div>
+        </div>
+    </div>
+</body>
+
+</html>
